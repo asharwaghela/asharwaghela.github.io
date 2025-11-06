@@ -1,0 +1,39 @@
+name: Build Tailwind & Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - fix/tailwind-build   # optional: also build on your branch pushes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build Tailwind (PostCSS)
+        run: npm run build:tailwind
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          # if you prefer to publish to main branch / docs folder:
+          # publish_dir: ./dist
+          # target_branch: main
