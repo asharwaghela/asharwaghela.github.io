@@ -1,41 +1,21 @@
-name: Build Tailwind CSS (npx fixed version)
+name: Build and Deploy (Tailwind)
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+          node-version: 22
+      - run: npm ci
+      - run: npm run build:tailwind
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          node-version: 18
-
-      - name: Build Tailwind CSS using npx (fixed version)
-        run: |
-          echo "Running Tailwind CLI via npx@4.1.16..."
-          npx --yes tailwindcss@4.1.16 -i ./src/input.css -o ./dist/tailwind.min.css --minify --content "./**/*.html"
-
-      - name: Upload built CSS as artifact (debug)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: tailwind-built
-          path: dist/tailwind.min.css
-
-      - name: Commit generated CSS (optional)
-        if: success()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A dist/tailwind.min.css
-          git commit -m "chore: build tailwind.min.css [skip ci]" || echo "No changes to commit"
-          git push origin HEAD:main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
