@@ -50,38 +50,24 @@
   <!-- End Google Tag Manager -->
   <!-- GTM placement guidance follows Google Tag Manager Help. -->
 
-  <!-- Speed: preconnect + preload fonts (display=swap included to reduce FOIT) -->
+  <!-- Speed: preconnect + preload fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
-  <!-- Styles (keeping Tailwind as you requested; only small critical inline CSS added) -->
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Critical inline CSS: small adjustments to reduce layout shift & reserve space -->
   <style>
     :root{--brand:#14b8a6;}
-    body{font-family:'Inter',sans-serif;margin:0}
-    /* Reserve hero height so desktop/large screens don't shift when fonts/images load */
+    body{font-family:'Inter',sans-serif}
     .hero-bg{background:linear-gradient(135deg,#e6fffa 0%,#f0fdfa 100%)}
-    .hero-inner { min-height:360px; display:flex; align-items:center; justify-content:center; padding-top:4rem; padding-bottom:4rem; }
-    @media(min-width:768px){ .hero-inner { min-height:420px; padding-top:5rem; padding-bottom:5rem; } }
-
-    /* Ensure logo image has explicit intrinsic size to avoid CLS */
-    .site-logo { display:inline-block; vertical-align:middle; width:auto; height:40px; }
-    @media(min-width:768px){ .site-logo { height:44px; } }
-
-    /* Floating WhatsApp button */
-    .whatsapp-fab{position:fixed;right:20px;bottom:20px;z-index:999;width:64px;height:64px;border-radius:9999px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.12);background:linear-gradient(180deg,var(--brand),#059669);color:white;text-decoration:none}
-    .whatsapp-fab:active{transform:translateY(1px)}
     .btn{transition:.25s transform ease,.25s box-shadow ease}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(20,184,166,.18)}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(20,184,166,.25)}
     .lazy-section{content-visibility:auto;contain-intrinsic-size: 1000px 800px;}
-    /* Map embed helper kept; iframe has fixed height to avoid reflow */
-    .map-embed iframe{display:block;width:100%;height:300px;border:0}
-    /* small accessibility helpers */
-    a:focus,button:focus{outline:3px solid rgba(20,184,166,.12);outline-offset:3px}
+    /* Responsive Google Map helper (unused for fixed height map) */
+    .map-embed { position: relative; width: 100%; overflow: hidden; }
+    @media (max-width: 480px) { .map-embed { } }
   </style>
 
   <!-- LocalBusiness Schema -->
@@ -141,53 +127,53 @@
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- The noscript iframe provides a fallback per GTM installation guide. -->
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-6 py-3 flex flex-wrap items-center gap-3 justify-between">
 
-    <!-- Logo (accessible, SEO-friendly) -->
-    <a href="/" class="flex items-center gap-2 whitespace-nowrap" aria-label="Asha Old Clothes Buyer - Home">
-      <!-- explicit width & height attributes to prevent CLS -->
-      <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" class="site-logo" width="400" height="400" />
-      <span class="text-xl sm:text-2xl font-extrabold text-teal-600">Asha Old Clothes Buyer</span>
-    </a>
 
-    <!-- Visible nav (optimized for mobile + desktop) -->
-    <nav class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-base text-center" aria-label="Primary navigation">
-      <a href="/" class="text-teal-600 font-semibold">Home</a>
-      <a href="/prices.html" class="text-gray-900 hover:text-teal-600 font-medium">Prices</a>
-      <a href="#process" class="text-gray-900 hover:text-teal-600 font-medium">Process</a>
-      <a href="#contact" class="text-gray-900 hover:text-teal-600 font-medium">Contact</a>
-      <a href="#faq" class="text-gray-900 hover:text-teal-600 font-medium">FAQ</a>
-      <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" rel="noopener noreferrer" class="text-gray-900 hover:text-teal-600 font-medium">Blog</a>
-      <a href="tel:+918828743006" class="bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg hover:bg-teal-600 transition flex items-center gap-2">
-        📞 Call Now
-      </a>
-    </nav>
+<!-- Logo (accessible, SEO-friendly) -->
+<a href="/" class="flex items-center gap-2 whitespace-nowrap">
+  <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" class="h-9 sm:h-10 w-auto">
+  <span class="text-xl sm:text-2xl font-extrabold text-teal-600">Asha Old Clothes Buyer</span>
+</a>
 
-  </div>
+
+<!-- Visible nav (optimized for mobile + desktop) -->
+<nav class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-base text-center">
+  <a href="/" class="text-teal-600 font-semibold">Home</a>
+  <a href="/prices.html" class="text-gray-900 hover:text-teal-600 font-medium">Prices</a>
+  <a href="#process" class="text-gray-900 hover:text-teal-600 font-medium">Process</a>
+  <a href="#contact" class="text-gray-900 hover:text-teal-600 font-medium">Contact</a>
+  <a href="#faq" class="text-gray-900 hover:text-teal-600 font-medium">FAQ</a>
+  <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" class="text-gray-900 hover:text-teal-600 font-medium">Blog</a>
+  <a href="tel:+918828743006" class="bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg hover:bg-teal-600 transition flex items-center gap-2">
+    📞 Call Now
+  </a>
+</nav>
+
+
 </header>
 
 <main>
 
   <!-- Hero -->
   <section class="hero-bg">
-    <div class="hero-inner container mx-auto px-6 text-center">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
-          Old Clothes Near Me? Sell or Donate with Asha Old Clothes Buyer in Thane
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8">
-          Get the best value for your old clothes with our free and convenient home pickup service. Clear your clutter today!
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://wa.me/918828743006?text=I%20want%20to%20sell%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Approx%20kg:%20" class="btn bg-green-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-green-600 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
-            Sell Clothes (WhatsApp)
-          </a>
-          <a href="https://wa.me/918828743006?text=I%20want%20to%20donate%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Pickup%20time:%20" class="btn bg-white text-green-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-green-500 hover:bg-gray-100 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
-            Donate Clothes (WhatsApp)
-          </a>
-        </div>
+    <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
+        Old Clothes Near Me? Sell or Donate with Asha Old Clothes Buyer in Thane
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Get the best value for your old clothes with our free and convenient home pickup service. Clear your clutter today!
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://wa.me/918828743006?text=I%20want%20to%20sell%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Approx%20kg:%20" class="btn bg-green-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-green-600 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
+          Sell Clothes (WhatsApp)
+        </a>
+        <a href="https://wa.me/918828743006?text=I%20want%20to%20donate%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Pickup%20time:%20" class="btn bg-white text-green-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-green-500 hover:bg-gray-100 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
+          Donate Clothes (WhatsApp)
+        </a>
       </div>
     </div>
   </section>
@@ -292,20 +278,18 @@
         </a>
       </div>
 
-      <!-- Map (kept as iframe with fixed height to avoid layout shift) -->
-      <div class="map-embed" aria-hidden="false">
-        <iframe
-          title="Asha Old Clothes Buyer on Google Maps"
-          aria-label="Map showing Asha Old Clothes Buyer"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1636382677216!2d72.97538437466889!3d19.23169884706728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9fc8852e1d3%3A0x8514c0eb40ced03c!2sAsha%20Old%20Clothes%20Buyer!5e0!3m2!1sen!2sin!4v1760650831115!5m2!1sen!2sin"
-          width="100%"
-          height="300"
-          style="border:0; display:block; width:100%; height:300px;"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+      <!-- Map (unchanged width/height/style as you sent) -->
+      <iframe
+        title="Asha Old Clothes Buyer on Google Maps"
+        aria-label="Map showing Asha Old Clothes Buyer"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1636382677216!2d72.97538437466889!3d19.23169884706728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9fc8852e1d3%3A0x8514c0eb40ced03c!2sAsha%20Old%20Clothes%20Buyer!5e0!3m2!1sen!2sin!4v1760650831115!5m2!1sen!2sin"
+        width="100%"
+        height="300"
+        style="border:0; display:block; width:100%; height:300px;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
 
       <p class="mt-4">Website: <a href="https://oldclothesbuyer.com/" class="text-teal-400 font-semibold">oldclothesbuyer.com</a></p>
       <p class="mt-1">Phone: <a href="tel:+918828743006" class="text-teal-400 font-semibold">+91 88287 43006</a></p>
@@ -453,7 +437,7 @@
     <p>
       <a href="https://oldclothesbuyerr.blogspot.com/" 
          target="_blank" 
-         class="text-teal-400 underline font-semibold hover:text-teal-300 focus:text-teal-300" rel="noopener noreferrer">
+         class="text-teal-400 underline font-semibold hover:text-teal-300 focus:text-teal-300">
         Visit Our Blog
       </a>
       <span class="text-gray-300"> | Old Clothes Near Me | Sell & Donate Old Clothes in Thane</span>
@@ -463,12 +447,6 @@
     </p>
   </div>
 </footer>
-
-<!-- Floating WhatsApp button (always visible) -->
-<a href="https://wa.me/918828743006?text=Hello%20Asha%20Old%20Clothes%20Buyer%20%7C%20I%20want%20to%20sell%20my%20old%20clothes" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-  <!-- simple emoji icon (keeps requests small) -->
-  <span aria-hidden="true" style="font-size:22px;line-height:0">💬</span>
-</a>
 
 </body>
 </html>
