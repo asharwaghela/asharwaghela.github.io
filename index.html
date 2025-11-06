@@ -6,16 +6,17 @@
   <title>Asha Old Clothes Buyer – Old Clothes Buyer Near Me in Thane</title>
   <meta name="description" content="Asha Old Clothes Buyer in Thane: free home pickup, instant cash, or donate old clothes. Call or WhatsApp to schedule a pickup today.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14b8a6">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://oldclothesbuyer.com/">
 
-  <!-- Favicon (browser tab icon) -->
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph / Brand identity -->
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Asha Old Clothes Buyer">
   <meta property="og:title" content="Asha Old Clothes Buyer – Old Clothes Buyer Near Me">
   <meta property="og:description" content="Sell or donate your old clothes easily with Asha Old Clothes Buyer in Thane. Free pickup and instant cash.">
@@ -23,7 +24,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://oldclothesbuyer.com/images/logo.webp">
 
-  <!-- Structured data (WebSite) to strengthen brand signal -->
+  <!-- WebSite schema with publisher.logo -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,6 +32,16 @@
     "name": "Asha Old Clothes Buyer",
     "alternateName": "Old Clothes Buyer",
     "url": "https://oldclothesbuyer.com/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Asha Old Clothes Buyer",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://oldclothesbuyer.com/images/logo.webp",
+        "width": 400,
+        "height": 400
+      }
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://oldclothesbuyer.com/?s={search_term_string}",
@@ -39,7 +50,7 @@
   }
   </script>
 
-  <!-- Google Tag Manager: place high in head -->
+  <!-- Google Tag Manager -->
   <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
   var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
@@ -47,35 +58,41 @@
   f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5KD5GSCX');
   </script>
-  <!-- End Google Tag Manager -->
-  <!-- GTM placement guidance follows Google Tag Manager Help. -->
 
-  <!-- Speed: preconnect + preload fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Local Tailwind build (must exist in repo) -->
+  <link rel="stylesheet" href="/dist/tailwind.min.css">
+
+  <!-- Tiny critical CSS for alignment / LCP -->
   <style>
-    :root{--brand:#14b8a6;}
-    body{font-family:'Inter',sans-serif}
-    .hero-bg{background:linear-gradient(135deg,#e6fffa 0%,#f0fdfa 100%)}
+    :root{--brand:#14b8a6;--muted:#6b7280}
+    html{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+    body{margin:0;background:#f8fafb;color:#0f172a;-webkit-font-smoothing:antialiased}
+    .site-header{background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04);position:sticky;top:0;z-index:50}
+    .logo-img{height:36px;width:auto;display:inline-block;vertical-align:middle}
+    .hero-bg{background:linear-gradient(135deg,#e6fffa,#f0fdfa)}
+    .hero-title{font-weight:800;line-height:1.05;color:#0f172a;margin:0 0 .75rem}
+    .hero-title.text-4xl{font-size:2rem}
+    @media(min-width:768px){ .hero-title{font-size:2.75rem} .logo-img{height:40px} }
     .btn{transition:.25s transform ease,.25s box-shadow ease}
     .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(20,184,166,.25)}
-    .lazy-section{content-visibility:auto;contain-intrinsic-size: 1000px 800px;}
-    /* Responsive Google Map helper (unused for fixed height map) */
-    .map-embed { position: relative; width: 100%; overflow: hidden; }
-    @media (max-width: 480px) { .map-embed { } }
+    a:focus,button:focus{outline:3px solid rgba(20,184,166,.12);outline-offset:3px}
+    footer{margin-top:2rem}
   </style>
 
-  <!-- LocalBusiness Schema -->
+  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"Asha Old Clothes Buyer",
+    "image":"https://oldclothesbuyer.com/images/logo.webp",
+    "logo":"https://oldclothesbuyer.com/images/logo.webp",
+    "@id":"https://oldclothesbuyer.com/",
     "url":"https://oldclothesbuyer.com/",
     "telephone":"+918828743006",
     "priceRange":"₹",
@@ -87,11 +104,25 @@
       "postalCode":"400607",
       "addressCountry":"IN"
     },
-    "areaServed":"Thane — Hiranandani Meadows, Hiranandani Estate (Patlipada), Lodha Amara (Kolshet Road), Kasarvadavli, Runwal, Dosti West County (Balkum), Dosti Oak (Balkum), Balkum, Manpada, Kolshet Road"
+    "geo":{ "@type":"GeoCoordinates", "latitude":19.231699, "longitude":72.975384 },
+    "areaServed":"Thane — Hiranandani Meadows, Hiranandani Estate (Patlipada), Lodha Amara (Kolshet Road), Kasarvadavli, Runwal, Dosti West County (Balkum), Dosti Oak (Balkum), Balkum, Manpada, Kolshet Road",
+    "openingHoursSpecification":[
+      {
+        "@type":"OpeningHoursSpecification",
+        "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens":"00:00",
+        "closes":"23:59"
+      }
+    ],
+    "sameAs":[
+      "https://www.google.com/maps/place/Asha+Old+Clothes+Buyer/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ]
   }
   </script>
 
-  <!-- FAQPage Schema -->
+  <!-- FAQPage JSON-LD (full) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -113,72 +144,87 @@
   }
   </script>
 
-  <!-- Smooth anchor scroll + offset -->
-  <style>
-    html{scroll-behavior:smooth}
-    :target{scroll-margin-top:80px}
-  </style>
+  <style>html{scroll-behavior:smooth}:target{scroll-margin-top:80px}</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- Google Tag Manager (noscript): immediately after opening body -->
+<!-- GTM noscript iframe -->
 <noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KD5GSCX"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KD5GSCX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
-<!-- The noscript iframe provides a fallback per GTM installation guide. -->
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="site-header bg-white shadow-sm sticky top-0 z-50">
   <div class="container mx-auto px-6 py-3 flex flex-wrap items-center gap-3 justify-between">
 
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 whitespace-nowrap" aria-label="Asha Old Clothes Buyer - Home">
+      <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" width="400" height="400" class="logo-img h-9 sm:h-10 w-auto">
+      <span class="text-xl sm:text-2xl font-extrabold text-teal-600">Asha Old Clothes Buyer</span>
+    </a>
 
-<!-- Logo (accessible, SEO-friendly) -->
-<a href="/" class="flex items-center gap-2 whitespace-nowrap">
-  <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" class="h-9 sm:h-10 w-auto">
-  <span class="text-xl sm:text-2xl font-extrabold text-teal-600">Asha Old Clothes Buyer</span>
-</a>
+    <!-- Desktop nav -->
+    <nav class="desktop-nav hidden md:flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-base text-center">
+      <a href="/" class="text-teal-600 font-semibold">Home</a>
+      <a href="/prices.html" class="text-gray-900 hover:text-teal-600 font-medium">Prices</a>
+      <a href="#process" class="text-gray-900 hover:text-teal-600 font-medium">Process</a>
+      <a href="#contact" class="text-gray-900 hover:text-teal-600 font-medium">Contact</a>
+      <a href="#faq" class="text-gray-900 hover:text-teal-600 font-medium">FAQ</a>
+      <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" rel="noopener noreferrer" class="text-gray-900 hover:text-teal-600 font-medium">Blog</a>
+      <a href="tel:+918828743006" class="bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg hover:bg-teal-600 transition flex items-center gap-2">
+        📞 Call Now
+      </a>
+    </nav>
 
+    <!-- Mobile toggle -->
+    <div class="mobile-nav-toggle md:hidden">
+      <button id="dotsToggle" class="p-2 rounded-md border border-gray-200" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="20" height="2" rx="1" fill="#0f172a"></rect>
+          <rect y="6" width="20" height="2" rx="1" fill="#0f172a"></rect>
+          <rect y="12" width="20" height="2" rx="1" fill="#0f172a"></rect>
+        </svg>
+      </button>
+    </div>
 
-<!-- Visible nav (optimized for mobile + desktop) -->
-<nav class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-base text-center">
-  <a href="/" class="text-teal-600 font-semibold">Home</a>
-  <a href="/prices.html" class="text-gray-900 hover:text-teal-600 font-medium">Prices</a>
-  <a href="#process" class="text-gray-900 hover:text-teal-600 font-medium">Process</a>
-  <a href="#contact" class="text-gray-900 hover:text-teal-600 font-medium">Contact</a>
-  <a href="#faq" class="text-gray-900 hover:text-teal-600 font-medium">FAQ</a>
-  <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" class="text-gray-900 hover:text-teal-600 font-medium">Blog</a>
-  <a href="tel:+918828743006" class="bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg hover:bg-teal-600 transition flex items-center gap-2">
-    📞 Call Now
-  </a>
-</nav>
+  </div>
 
-
+  <!-- Mobile floating menu -->
+  <div id="mobileMenu" class="mobile-menu hidden md:hidden bg-white border-t border-gray-100" role="menu" aria-hidden="true">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a href="/" role="menuitem" class="px-3 py-2 rounded-md hover:bg-gray-50">Home</a>
+      <a href="/prices.html" role="menuitem" class="px-3 py-2 rounded-md hover:bg-gray-50">Prices</a>
+      <a href="#process" role="menuitem" class="px-3 py-2 rounded-md hover:bg-gray-50">Process</a>
+      <a href="#contact" role="menuitem" class="px-3 py-2 rounded-md hover:bg-gray-50">Contact</a>
+      <a href="#faq" role="menuitem" class="px-3 py-2 rounded-md hover:bg-gray-50">FAQ</a>
+      <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md hover:bg-gray-50">Blog</a>
+      <div class="hint text-sm text-gray-600 mt-2">Menu will hide automatically after a few seconds</div>
+    </div>
+  </div>
 </header>
 
-<main>
+<main id="main">
 
   <!-- Hero -->
   <section class="hero-bg">
     <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
+      <h1 class="hero-title text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">
         Old Clothes Near Me? Sell or Donate with Asha Old Clothes Buyer in Thane
       </h1>
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
         Get the best value for your old clothes with our free and convenient home pickup service. Clear your clutter today!
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/918828743006?text=I%20want%20to%20sell%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Approx%20kg:%20" class="btn bg-green-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-green-600 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
+        <a href="https://wa.me/918828743006?text=I%20want%20to%20sell%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Approx%20kg:%20" class="btn bg-green-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-green-600 inline-flex items-center justify-center gap-3" rel="noopener nofollow" aria-label="Chat on WhatsApp to sell clothes">
           Sell Clothes (WhatsApp)
         </a>
-        <a href="https://wa.me/918828743006?text=I%20want%20to%20donate%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Pickup%20time:%20" class="btn bg-white text-green-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-green-500 hover:bg-gray-100 inline-flex items-center justify-center gap-3" rel="noopener nofollow">
+        <a href="https://wa.me/918828743006?text=I%20want%20to%20donate%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Pickup%20time:%20" class="btn bg-white text-green-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-green-500 hover:bg-gray-100 inline-flex items-center justify-center gap-3" rel="noopener nofollow" aria-label="Chat on WhatsApp to donate clothes">
           Donate Clothes (WhatsApp)
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us with soft background -->
+  <!-- Why Choose Us -->
   <section class="py-16 sm:py-20">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
@@ -231,30 +277,37 @@
   </section>
 
   <!-- Process -->
-  <section id="process" class="bg-white py-16 sm:py-20 lazy-section">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800">Our Simple Process</h2>
-        <p class="text-gray-600 mt-2">Selling or donating old clothes is as easy as 1-2-3.</p>
+  <section id="process" class="process-wrap bg-white py-16 sm:py-20">
+    <div class="process-head max-w-3xl mx-auto text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-800">Our Simple Process</h2>
+      <p class="text-gray-600 mt-2">Selling or donating old clothes is as easy as 1-2-3.</p>
+    </div>
+
+    <div class="process-steps container mx-auto px-6 flex items-center justify-between gap-6 flex-wrap">
+      <div class="process-step flex-1 min-w-[220px] text-center p-6 rounded-xl">
+        <div class="step-circle w-20 h-20 rounded-full bg-white border-4 border-teal-100 mx-auto flex items-center justify-center text-2xl font-bold text-teal-600 mb-4">1</div>
+        <h3 class="step-title text-lg font-semibold mb-2">Call Us</h3>
+        <p class="step-desc text-sm text-gray-600 max-w-[320px] mx-auto">Schedule a pickup at your convenience via call or WhatsApp. We'll confirm a slot and come to your doorstep.</p>
       </div>
-      <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-        <div class="text-center max-w-xs">
-          <div class="bg-teal-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-          <h4 class="text-xl font-semibold mb-2">Call Us</h4>
-          <p class="text-gray-600">Schedule a pickup at your convenience via call or WhatsApp.</p>
-        </div>
-        <div class="text-gray-300 text-2xl hidden md:block">→</div>
-        <div class="text-center max-w-xs">
-          <div class="bg-teal-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-          <h4 class="text-xl font-semibold mb-2">We Arrive</h4>
-          <p class="text-gray-600">Our team will come to your location for a quick inspection.</p>
-        </div>
-        <div class="text-gray-300 text-2xl hidden md:block">→</div>
-        <div class="text-center max-w-xs">
-          <div class="bg-teal-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-          <h4 class="text-xl font-semibold mb-2">Get Paid / Donate</h4>
-          <p class="text-gray-600">Receive instant cash or donate your clothes to people in need.</p>
-        </div>
+
+      <div class="process-arrow hidden md:flex items-center justify-center flex-none w-14" aria-hidden="true">
+        <svg width="48" height="24" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12H40" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/><path d="M34 6L40 12L34 18" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="process-step flex-1 min-w-[220px] text-center p-6 rounded-xl">
+        <div class="step-circle w-20 h-20 rounded-full bg-white border-4 border-teal-100 mx-auto flex items-center justify-center text-2xl font-bold text-teal-600 mb-4">2</div>
+        <h3 class="step-title text-lg font-semibold mb-2">We Arrive</h3>
+        <p class="step-desc text-sm text-gray-600 max-w-[320px] mx-auto">Our team arrives for a quick inspection, weighs the load, and provides a fair on-the-spot quote.</p>
+      </div>
+
+      <div class="process-arrow hidden md:flex items-center justify-center flex-none w-14" aria-hidden="true">
+        <svg width="48" height="24" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12H40" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/><path d="M34 6L40 12L34 18" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <div class="process-step flex-1 min-w-[220px] text-center p-6 rounded-xl">
+        <div class="step-circle w-20 h-20 rounded-full bg-white border-4 border-teal-100 mx-auto flex items-center justify-center text-2xl font-bold text-teal-600 mb-4">3</div>
+        <h3 class="step-title text-lg font-semibold mb-2">Get Paid / Donate</h3>
+        <p class="step-desc text-sm text-gray-600 max-w-[320px] mx-auto">Receive instant cash or donate items to people in need — whichever you prefer, we handle collection responsibly.</p>
       </div>
     </div>
   </section>
@@ -268,28 +321,23 @@
       <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6">
         <a href="https://wa.me/918828743006?text=I%20want%20to%20sell%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Approx%20kg:%20"
            class="btn bg-green-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-green-600 inline-flex items-center justify-center gap-3"
-           rel="noopener nofollow">
+           rel="noopener nofollow" aria-label="Chat on WhatsApp to sell clothes">
           Sell Clothes (WhatsApp)
         </a>
         <a href="https://wa.me/918828743006?text=I%20want%20to%20donate%20my%20old%20clothes%20%7C%20Name:%20%7C%20Area:%20%7C%20Pickup%20time:%20"
            class="btn bg-white text-green-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-green-500 hover:bg-gray-100 inline-flex items-center justify-center gap-3"
-           rel="noopener nofollow">
+           rel="noopener nofollow" aria-label="Chat on WhatsApp to donate clothes">
           Donate Clothes (WhatsApp)
         </a>
       </div>
 
-      <!-- Map (unchanged width/height/style as you sent) -->
-      <iframe
-        title="Asha Old Clothes Buyer on Google Maps"
-        aria-label="Map showing Asha Old Clothes Buyer"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1636382677216!2d72.97538437466889!3d19.23169884706728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9fc8852e1d3%3A0x8514c0eb40ced03c!2sAsha%20Old%20Clothes%20Buyer!5e0!3m2!1sen!2sin!4v1760650831115!5m2!1sen!2sin"
-        width="100%"
-        height="300"
-        style="border:0; display:block; width:100%; height:300px;"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <!-- Map placeholder -->
+      <div id="mapPlaceholder" class="map-embed" style="position:relative;min-height:200px;border-radius:8px;overflow:hidden;background:#e6fffa">
+        <img src="/images/map-placeholder.webp" alt="Map placeholder" style="width:100%;height:300px;object-fit:cover;display:block" loading="lazy">
+        <button id="loadMapBtn" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#059669;color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer">
+          Load Map
+        </button>
+      </div>
 
       <p class="mt-4">Website: <a href="https://oldclothesbuyer.com/" class="text-teal-400 font-semibold">oldclothesbuyer.com</a></p>
       <p class="mt-1">Phone: <a href="tel:+918828743006" class="text-teal-400 font-semibold">+91 88287 43006</a></p>
@@ -297,7 +345,7 @@
     </div>
   </section>
 
-  <!-- FAQ directly under map as requested -->
+  <!-- FAQ (full) -->
   <section id="faq" class="py-16 sm:py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-10">
@@ -425,19 +473,26 @@
             Use the Call or WhatsApp buttons on oldclothesbuyer.com for the quickest response.
           </div>
         </details>
+
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- Floating WhatsApp button (SVG icon) -->
+<a href="https://wa.me/918828743006?text=Hello%20Asha%20Old%20Clothes%20Buyer%20%7C%20I%20want%20to%20sell%20my%20old%20clothes" class="whatsapp-fab fixed right-5 bottom-5 z-50 w-16 h-16 rounded-full flex items-center justify-center shadow-lg" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" style="background:linear-gradient(180deg,#14b8a6,#059669);color:#fff;text-decoration:none">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="24" height="24">
+    <path fill="#ffffff" d="M16 3.2C9.2 3.2 3.9 8.5 3.9 15.3c0 2.7.8 5.3 2.3 7.5L3 28l5.6-1.8c2 1.2 4.4 1.9 6.9 1.9 6.8 0 12.1-5.3 12.1-12.1S22.8 3.2 16 3.2z"/>
+    <path fill="#ffffff" d="M23.9 20.1c-.4-1.8-1.6-3.3-3.3-4.1-.9-.5-1.9-.8-3-.8-.8 0-1.5.1-2.2.3-.3.1-.6.1-.9 0-.3-.1-.5-.2-.7-.4-.5-.3-1.1-.5-1.6-.8-.3-.2-.5-.4-.7-.6 0 0-.4-.3-.4-.9 0-.6.3-.9.4-1.1.1-.3.6-1.1 1.1-1.7.1-.1.2-.3.3-.5.1-.1.1-.3 0-.4-.1-.1-1.6-4.1-1.8-4.4-.2-.3-.6-.5-.9-.6-.2 0-.6 0-.9.1-.6.2-1.2.6-1.6 1.1-.4.6-.7 1.3-.7 2.1 0 4.3 4.6 9.6 10.5 11 1.1.3 2.4.5 3.6.5 1 0 2.1-.2 3.1-.5 0 0 .9-.3 1.2-.7.4-.4.7-1.1.6-1.9z"/>
+  </svg>
+</a>
+
 <footer class="bg-gray-900 text-white py-6">
   <div class="container mx-auto px-6 text-center">
     <p>© 2025 Asha Old Clothes Buyer. All Rights Reserved.</p>
     <p>
-      <a href="https://oldclothesbuyerr.blogspot.com/" 
-         target="_blank" 
-         class="text-teal-400 underline font-semibold hover:text-teal-300 focus:text-teal-300">
+      <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" rel="noopener noreferrer" class="text-teal-400 underline font-semibold hover:text-teal-300 focus:text-teal-300">
         Visit Our Blog
       </a>
       <span class="text-gray-300"> | Old Clothes Near Me | Sell & Donate Old Clothes in Thane</span>
@@ -447,6 +502,67 @@
     </p>
   </div>
 </footer>
+
+<!-- Scripts: map lazy-load + mobile menu toggle -->
+<script>
+(function(){
+  // Map lazy loader
+  const placeholder = document.getElementById('mapPlaceholder');
+  const btn = document.getElementById('loadMapBtn');
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.1636382677216!2d72.97538437466889!3d19.23169884706728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9fc8852e1d3%3A0x8514c0eb40ced03c!2sAsha%20Old%20Clothes%20Buyer!5e0!3m2!1sen!2sin!4v1760650831115!5m2!1sen!2sin";
+  function insertMap(){
+    if(!placeholder) return;
+    if(placeholder.dataset.loaded === "1") return;
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Asha Old Clothes Buyer on Google Maps';
+    iframe.setAttribute('aria-label','Map showing Asha Old Clothes Buyer');
+    iframe.src = embedUrl;
+    iframe.width = "100%";
+    iframe.height = "300";
+    iframe.style.border = "0";
+    iframe.loading = "lazy";
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    placeholder.innerHTML = '';
+    placeholder.appendChild(iframe);
+    placeholder.dataset.loaded = "1";
+  }
+  btn && btn.addEventListener('click', insertMap);
+  if('IntersectionObserver' in window && placeholder){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ insertMap(); io.disconnect(); }});
+    }, {rootMargin:'200px'});
+    io.observe(placeholder);
+  }
+
+  // Mobile menu toggle
+  const dots = document.getElementById('dotsToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if(dots && mobileMenu){
+    dots.addEventListener('click', function(e){
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if(isHidden){
+        mobileMenu.classList.remove('hidden');
+        dots.setAttribute('aria-expanded','true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        dots.setAttribute('aria-expanded','false');
+      }
+    });
+
+    // Auto-hide after a few seconds when opened
+    let hideTimer = null;
+    mobileMenu.addEventListener('mouseenter', function(){ clearTimeout(hideTimer); });
+    mobileMenu.addEventListener('mouseleave', function(){ hideTimer = setTimeout(()=>{ mobileMenu.classList.add('hidden'); dots.setAttribute('aria-expanded','false'); }, 2000); });
+
+    document.addEventListener('click', function(e){
+      if(!mobileMenu.contains(e.target) && !dots.contains(e.target)){
+        mobileMenu.classList.add('hidden');
+        dots.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
