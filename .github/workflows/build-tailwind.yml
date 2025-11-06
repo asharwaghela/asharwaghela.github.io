@@ -19,8 +19,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci || npm install
+      - name: Install dependencies (robust)
+        # Use npm install (safer than npm ci when lockfile missing).
+        # --no-audit and --prefer-offline speed it up a bit in CI.
+        run: |
+          echo "Installing npm deps..."
+          npm config set depth 0
+          npm install --no-audit --no-fund --prefer-offline || npm install
 
       - name: Build Tailwind CSS
         run: npx tailwindcss -i ./src/input.css -o ./dist/tailwind.min.css --minify --content "./**/*.html"
