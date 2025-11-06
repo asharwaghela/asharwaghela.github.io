@@ -1,4 +1,4 @@
-name: Build Tailwind CSS
+name: Build Tailwind CSS (npx fixed version)
 
 on:
   push:
@@ -19,13 +19,20 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci || npm install
+      - name: Build Tailwind CSS using npx (fixed version)
+        run: |
+          echo "Running Tailwind CLI via npx@4.1.16..."
+          npx --yes tailwindcss@4.1.16 -i ./src/input.css -o ./dist/tailwind.min.css --minify --content "./**/*.html"
 
-      - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/input.css -o ./dist/tailwind.min.css --minify --content "./**/*.html"
+      - name: Upload built CSS as artifact (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tailwind-built
+          path: dist/tailwind.min.css
 
-      - name: Commit generated CSS
+      - name: Commit generated CSS (optional)
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
