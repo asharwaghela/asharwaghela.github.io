@@ -48,61 +48,7 @@
     .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(20,184,166,.25)}
     .lazy-section{content-visibility:auto;contain-intrinsic-size: 1000px 800px;}
 
-    /* Floating controls (WhatsApp + 3-dot menu) */
-    #three-dot-nav { position: fixed; right: 110px; bottom: 22px; z-index: 9998; }
-    #three-dot-btn {
-      width:44px;height:44px;border-radius:999px;background:#111;color:#fff;
-      display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.18);
-    }
-    #three-dot-menu {
-      display:none; position:absolute; right:0; bottom:54px;
-      background:#fff;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.15);
-      min-width:220px; overflow:hidden;
-    }
-    #three-dot-menu a {
-      display:block;padding:10px 14px;color:#111;text-decoration:none;font-weight:600;
-      border-bottom:1px solid rgba(0,0,0,0.06);
-    }
-    #three-dot-menu a:last-child{ border-bottom:0; }
-    #three-dot-menu a:hover{ background:rgba(0,0,0,0.04); }
-
-    /* Vertical social floating (attached-site style) */
-    .social-vertical {
-      position: fixed;
-      right: 18px;
-      top: 36%;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      align-items: center;
-      transform: translateY(-50%);
-    }
-    .social-btn {
-      width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-      box-shadow:0 8px 20px rgba(0,0,0,0.18); cursor:pointer; text-decoration:none;
-      transition: transform .15s ease, box-shadow .15s ease;
-      color: #fff; font-weight:700;
-    }
-    .social-btn:active{ transform: translateY(1px); }
-    /* Facebook */
-    .social-fb{ background: linear-gradient(180deg,#2d6cdf,#1e5de0); }
-    /* Instagram gradient similar to attached */
-    .social-ig{ background: radial-gradient(circle at 30% 30%, #ffd4b6 0%, transparent 10%), linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4); }
-    /* WhatsApp green */
-    .social-wa{ background: linear-gradient(180deg,#25D366,#1da94a); }
-    /* Call (phone) */
-    .social-call{ background: linear-gradient(180deg,#34d399,#059669); }
-
-    /* small icon inside card if needed */
-    .social-btn svg { width:22px; height:22px; display:block; }
-
-    /* responsiveness */
-    @media (max-width:420px){
-      #three-dot-nav{ right:90px; }
-      .social-vertical{ right:12px; top:44%; gap:12px; }
-      .social-btn{ width:46px; height:46px; }
-    }
+    /* Removed floating right-side social & 3-dot CSS to avoid mobile overlap */
 
     /* Smooth anchor scroll offset */
     html{scroll-behavior:smooth}
@@ -122,7 +68,7 @@
 
     <!-- Logo -->
     <a href="/" class="flex items-center gap-2 whitespace-nowrap">
-      <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" class="h-9 sm:h-10 w-auto">
+      <img src="/images/logo.webp" alt="Logo of Asha Old Clothes Buyer" class="h-9 sm:h-10 w-auto" loading="lazy">
       <span class="text-xl sm:text-2xl font-extrabold text-teal-600">Asha Old Clothes Buyer</span>
     </a>
 
@@ -139,7 +85,7 @@
       </a>
     </nav>
 
-    <!-- social icons small (kept if desired) -->
+    <!-- header social icons (small) kept — they don't float and won't block mobile -->
     <div class="flex items-center gap-3 ml-3">
       <a href="https://www.facebook.com/share/1C4X2Sm7PM/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -445,78 +391,7 @@
   </div>
 </footer>
 
-<!-- 3-dot nav (unchanged) -->
-<div id="three-dot-nav" aria-hidden="false">
-  <div id="three-dot-btn" title="Menu" aria-label="Open menu" onclick="toggleThreeDotMenu()" role="button" tabindex="0">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="5" r="1.6" fill="white"/>
-      <circle cx="12" cy="12" r="1.6" fill="white"/>
-      <circle cx="12" cy="19" r="1.6" fill="white"/>
-    </svg>
-  </div>
-
-  <nav id="three-dot-menu" aria-label="Quick links">
-    <a href="https://oldclothesbuyer.com/">Home</a>
-    <a href="https://oldclothesbuyer.com/prices.html">Prices</a>
-    <a href="https://oldclothesbuyer.com/#process">Process</a>
-    <a href="https://oldclothesbuyer.com/#contact">Contact</a>
-    <a href="https://oldclothesbuyer.com/#faq">FAQ</a>
-    <a href="https://oldclothesbuyerr.blogspot.com/" target="_blank" rel="noopener">Blog</a>
-    <a href="https://www.facebook.com/share/1C4X2Sm7PM/" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://www.instagram.com/asha.old.clothes.buyer?igsh=MTUxOTNjOHR6OGtreA==" target="_blank" rel="noopener">Instagram</a>
-  </nav>
-</div>
-
-<!-- Vertical social floating (attached website style) -->
-<div class="social-vertical" aria-hidden="false" aria-label="Quick social links">
-  <a class="social-btn social-fb" href="https://www.facebook.com/share/1C4X2Sm7PM/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    <!-- fb svg -->
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fff" d="M22 12a10 10 0-10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H22z"/></svg>
-  </a>
-
-  <a class="social-btn social-ig" href="https://www.instagram.com/asha.old.clothes.buyer?igsh=MTUxOTNjOHR6OGtreA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    <!-- ig svg (white) -->
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fff" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.4a4.6 4.6 0 100 9.2 4.6 4.6 0 000-9.2zM17.5 6.5a.7.7 0 11-.001.001z"/></svg>
-  </a>
-
-  <a class="social-btn social-wa" href="https://wa.me/918828743006?text=Hi%20Asha%20Old%20Clothes%20Buyer%2C%20I%20want%20to%20sell%20my%20clothes." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-    <!-- wa svg (white) -->
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fff" d="M20.5 3.5A10.5 10.5 0 0012 0C5.373 0 .01 5.373.01 12 0 14.37.55 16.67 1.6 18.77L0 24l5.55-1.49A10.5 10.5 0 0024 12 10.5 10.5 0 0020.5 3.5zM12 21.5c-2.14 0-4.11-.66-5.77-1.8l-.4-.25L4 20l.96-2.82-.25-.4A9.46 9.46 0 0112 2.5a9.46 9.46 0 010 19z"/></svg>
-  </a>
-
-  <a class="social-btn social-call" href="tel:+918828743006" aria-label="Call us">
-    <!-- phone svg -->
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fff" d="M6.6 10.8c1.2 2.3 3 4.1 5.3 5.3l1.4-1.4c.2-.2.5-.3.8-.2 1 .3 2 .5 3 .5.4 0 .8.3.8.8V20c0 .4-.3.8-.8.8C10.7 20.9 3.1 13.3 3.1 4.8 3.1 4.4 3.4 4.1 3.8 4.1H7c.4 0 .8.3.8.8 0 1 .2 2 .5 3 .1.3 0 .6-.2.8L6.6 10.8z"/></svg>
-  </a>
-</div>
-
-<!-- 3-dot + socials scripts -->
-<script>
-/* Toggle for 3-dot menu with accessible state */
-function toggleThreeDotMenu(){
-  var btn = document.getElementById('three-dot-btn');
-  var menu = document.getElementById('three-dot-menu');
-  if(!menu || !btn) return;
-  var isOpen = menu.style.display === 'block';
-  menu.style.display = isOpen ? 'none' : 'block';
-  btn.setAttribute('aria-expanded', String(!isOpen));
-}
-/* close menu on outside click */
-document.addEventListener('click', function(e){
-  var nav = document.getElementById('three-dot-nav');
-  var menu = document.getElementById('three-dot-menu');
-  if(!nav || !menu) return;
-  if(nav.contains(e.target)) return;
-  menu.style.display = 'none';
-  var btn = document.getElementById('three-dot-btn');
-  if(btn) btn.setAttribute('aria-expanded', 'false');
-});
-/* allow keyboard toggle */
-var threeBtn = document.getElementById('three-dot-btn');
-if(threeBtn){
-  threeBtn.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleThreeDotMenu(); } });
-}
-</script>
+<!-- Floating elements removed to keep mobile clean -->
 
 </body>
 </html>
